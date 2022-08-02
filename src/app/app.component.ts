@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { AngularFirestore } from "@angular/fire/compat/firestore";
+import { Observable } from "rxjs";
 import { add } from "lodash-es";
 
 import { environment } from "./../environments/environment";
@@ -9,7 +11,10 @@ import { environment } from "./../environments/environment";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  constructor() {
+  items: Observable<any[]>;
+
+  constructor(firestore: AngularFirestore) {
+    this.items = firestore.collection("items").valueChanges();
     console.log(environment.production, add(660, 6)); // Logs false for default environment
   }
   title = "app works!";

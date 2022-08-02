@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-store-example-25acc": {
+      "hosting": {
+        "angular.io-example": [
+          "angular-store-example-25acc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-store-example-25acc"
+  }
+}

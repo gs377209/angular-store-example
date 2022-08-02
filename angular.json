@@ -115,6 +115,16 @@
               "devServerTarget": "angular.io-example:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "angular.io-example:build:production",
+            "firebaseProject": "angular-store-example-25acc",
+            "firebaseHostingSite": "angular-store-example-25acc"
+          }
         }
       }
     }

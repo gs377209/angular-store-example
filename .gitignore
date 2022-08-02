@@ -3,3 +3,8 @@ build
 coverage
 .angular
 dist
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
